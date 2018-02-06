@@ -9,12 +9,11 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>discovery</module>
+        <module>eurekaServer</module>
         <module>service</module>
         <module>service2</module>
         <module>gateway</module>
         <module>swaggerUI</module>
-        <module>serviceEurekaApplication</module>
         <module>serviceEureka</module>
     </modules>
 
