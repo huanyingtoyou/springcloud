@@ -1,4 +1,4 @@
-package com.lihy.springCloud.serviceEureka;
+package com.lihy.serviceEureka.application;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
@@ -20,10 +20,13 @@ public class ServiceEurekaApplication {
         SpringApplication.run(ServiceEurekaApplication.class, args);
     }
 
+    /**
+     * 这是一种获取方式
+     */
     @Value("${server.port}")
     String port;
     @RequestMapping("/hi")
     public String home(@RequestParam String name) {
-        return "hi " + name + ", i am from port:" + port;
+        return "你好，" + name + "，我来自端口号：" + port;
     }
 }

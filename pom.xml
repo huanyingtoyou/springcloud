@@ -15,6 +15,8 @@
         <module>gateway</module>
         <module>swaggerUI</module>
         <module>serviceEureka</module>
+        <module>common</module>
+        <module>api</module>
     </modules>
 
     <!-- spring cloud 配置 -->

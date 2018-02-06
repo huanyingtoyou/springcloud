@@ -30,7 +30,6 @@ import java.util.UUID;
 public class UserInfoController {
     private Logger logger = LoggerFactory.getLogger(getClass());
 
-    @ResponseBody
     @RequestMapping(value = "/selectAllUsers", method = RequestMethod.GET)
     @ApiOperation(value = "查询所有的人员信息并分页展示", notes = "查询所有的人员信息并分页展示")
     @ApiImplicitParams({
