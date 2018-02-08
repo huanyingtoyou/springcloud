@@ -6,13 +6,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * 寻找服务name为service-eureka里的服务
+ * 公共接口api
+ * 示例：寻找服务name为service-impl里的服务
  * @author lihy
  * @date 2018/02/07
  */
-@FeignClient(value = "service-eureka")
-public interface HelloApi {
+@FeignClient(value = "service-impl", path = "/hello")
+public interface HelloWorldApi {
 
-    @RequestMapping(value = "/hi", method = RequestMethod.GET)
-    String sayHelloFromClient(@RequestParam(value = "name") String name);
+    @RequestMapping(value = "/helloWorld", method = RequestMethod.GET)
+    String sayHelloWorld(@RequestParam(value = "name") String name);
 }

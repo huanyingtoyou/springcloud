@@ -9,10 +9,10 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>service-eureka</module>
         <module>eureka-registry-center</module>
         <module>api-feign</module>
         <module>test-web</module>
+        <module>service-impl</module>
     </modules>
 
 </project>
