@@ -16,7 +16,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@ComponentScan(basePackages={"com.lihy"})
+@ComponentScan(basePackages={"com.lihy.testWeb"})
 @EnableFeignClients(basePackages = "com.lihy.feign.api")
 public class TestWebApplication {
 
