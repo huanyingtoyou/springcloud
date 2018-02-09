@@ -14,7 +14,7 @@ import org.springframework.context.annotation.ComponentScan;
  */
 @SpringBootApplication
 @EnableEurekaClient
-@ComponentScan(basePackages={"com.lihy"})
+@ComponentScan(basePackages={"com.lihy.serviceImpl"})
 public class ServiceImplApplication {
 
     public static void main(String[] args) {

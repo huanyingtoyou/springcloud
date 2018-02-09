@@ -8,10 +8,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * 公共接口api
  * 示例：寻找服务name为service-impl里的服务
+ * feign远程调用接口
+ * FeignClient注解的name属性值要写服务提供者在注册中心注册的服务名称
+ * FeignClient注解的fallback属性值表示远程调用失败时的回调类
  * @author lihy
  * @date 2018/02/07
  */
-@FeignClient(value = "service-impl", path = "/hello")
+@FeignClient(value = "service-impl", path = "/hello", fallback = HelloWorldApiHystrixFallback.class)
 public interface HelloWorldApi {
 
     @RequestMapping(value = "/helloWorld", method = RequestMethod.GET)

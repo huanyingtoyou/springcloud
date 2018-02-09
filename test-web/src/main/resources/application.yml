@@ -1,11 +1,17 @@
+spring:
+  application:
+    name: test-web
+server:
+  port: 8083
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8081/eureka/
   instance:
-      status-page-url: http://localhost:${server.port}/swagger-ui.html
-server:
-  port: 8083
-spring:
-  application:
-    name: test-web
+      #status-page-url: http://localhost:${server.port}/swagger-ui.html
+      status-page-url: http://localhost:${server.port}/swagger/index.html
+#feign远程调用配置
+feign:
+  hystrix:
+    #开启熔断
+    enabled: true

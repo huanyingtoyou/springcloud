@@ -7,3 +7,5 @@
 - 最后再启动test-web里的TestWebApplication
 - 访问：[localhost:8083/hello/helloWorld?name=lihy](localhost:8083/hello/helloWorld?name=lihy)
 - 集成了swaggerUI，访问：[localhost:8083/swagger/index.html](localhost:8083/swagger/index.html)
+- hystrix监控界面，访问：[hystrix监控界面](http://localhost:8083/hystrix)
+- http://localhost:8083/hystrix.stream

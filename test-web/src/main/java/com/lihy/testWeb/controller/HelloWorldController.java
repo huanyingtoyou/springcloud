@@ -2,6 +2,8 @@ package com.lihy.testWeb.controller;
 
 import com.lihy.feign.api.test.HelloWorldApi;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiImplicitParam;
+import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -24,7 +26,10 @@ public class HelloWorldController {
     @Autowired
     private HelloWorldApi helloWorldApi;
 
-    @ApiOperation(value = "向helloWorld介绍你自己", notes = "向helloWorld介绍你自己")
+    @ApiOperation(value = "告诉world你是谁", notes = "告诉我你是谁，我就让你嘿嘿嘿")
+    @ApiImplicitParams({
+            @ApiImplicitParam(name = "name", value = "姓名", required = true, dataType = "String", paramType="query")
+    })
     @RequestMapping(value = "/helloWorld", method = RequestMethod.GET)
     public String sayHelloWorld(@RequestParam String name) {
         return helloWorldApi.sayHelloWorld(name);
