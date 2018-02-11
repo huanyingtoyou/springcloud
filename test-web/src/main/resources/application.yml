@@ -10,8 +10,7 @@ eureka:
   instance:
       #status-page-url: http://localhost:${server.port}/swagger-ui.html
       status-page-url: http://localhost:${server.port}/swagger/index.html
-#feign远程调用配置
+#feign远程调用配置开启熔断
 feign:
   hystrix:
-    #开启熔断
     enabled: true

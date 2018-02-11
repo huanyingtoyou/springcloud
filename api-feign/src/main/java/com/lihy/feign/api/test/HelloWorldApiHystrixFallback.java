@@ -12,6 +12,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class HelloWorldApiHystrixFallback implements HelloWorldApi {
     @Override
     public String sayHelloWorld(@RequestParam(value = "name") String name) {
-        return "你好，" + name + "调用失败！";
+        return "你好，" + name + "，该服务调用失败！";
     }
 }

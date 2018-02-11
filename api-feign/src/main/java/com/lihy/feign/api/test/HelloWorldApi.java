@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * feign远程调用接口
  * FeignClient注解的name属性值要写服务提供者在注册中心注册的服务名称
  * FeignClient注解的fallback属性值表示远程调用失败时的回调类
+ * 注：FeignClient注解还有fallbackFactory属性，该属性功能和fallback一致，都是提供降级服务回调的
  * @author lihy
  * @date 2018/02/07
  */
