@@ -13,6 +13,8 @@
         <module>api-feign</module>
         <module>test-web</module>
         <module>service-impl</module>
+        <module>service-second-impl</module>
+        <module>zuul</module>
     </modules>
 
 </project>

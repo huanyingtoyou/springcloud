@@ -2,7 +2,7 @@ spring:
   application:
     name: test-web
 server:
-  port: 8083
+  port: 8088
 eureka:
   client:
     serviceUrl:
@@ -14,3 +14,12 @@ eureka:
 feign:
   hystrix:
     enabled: true
+#路由设置
+zuul:
+  routes:
+    api-a:
+      path: /api-a/**
+      serviceId: service-impl
+    api-b:
+      path: /api-b/**
+      serviceId: service-second-impl
