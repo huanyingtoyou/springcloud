@@ -15,3 +15,11 @@ zuul:
     api-b:
       path: /api-b/**
       serviceId: service-second-impl
+
+#是否开启重试功能
+  retryable: true
+#对当前服务的重试次数
+ribbon:
+  MaxAutoRetries: 2
+#切换相同Server的次数
+  MaxAutoRetriesNextServer: 0

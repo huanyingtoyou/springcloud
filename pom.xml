@@ -16,7 +16,7 @@
         <module>service-second-impl</module>
         <module>zuul</module>
         <module>config-server</module>
-        <module>config-repository</module>
+        <!--<module>config-repository</module>-->
         <module>config-client</module>
     </modules>
 
